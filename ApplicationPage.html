@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Application Page</title>
+    <link rel="stylesheet" type="text/css" href="Style/application_stylesheet.css" />
+    <script type="text/javascript" src="Script/application_javascript.js"></script> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+
+    <!--section left side div-->
+    <div id="idLeftDivBox" class="classLeftDivBox">
+    </div>
+
+    <!--section for centre div-->
+    <div id="idCentreDivBox" class="classCentreDivBox">
+
+        <!--Page Header-->
+        <div id="idHeaderDiv" class="classHeaderDiv">
+            <label class="classLabelAppName">
+                <strong>Shoe Inventory Application</strong>
+            </label>
+        </div>
+
+        <!-- main section, list all inventory -->
+        <div id="idDivListAllItemInventory" class="classDivListAllItemInventory">
+            <label id="idLabelTitleListAllItemInventory" class="classLabelTitleListAllItemInventory">
+                <strong><u>Inventory List</u></strong>
+            </label>
+            <br />
+
+            <table id="idTableShoeInventory">
+            </table>
+
+            <!-- snackbar for get (first load) -->
+            <div id="snackbar_get_initial_load"><strong>GET: Shoe Inventory List Loaded Successfully!</strong></div>
+            <!-- snackbar for post -->
+            <div id="snackbar_post"><strong>POST: Item inserted successful!</strong></div>
+            <!-- snackbar for put -->
+            <div id="snackbar_put"><strong>PUT: Shoe data updated successfully!</strong></div>
+            <!-- snackbar for delete operation -->
+            <div id="snackbar_delete"><strong>DELETE: Shoe Item deleted successfully!</strong></div>
+
+
+
+            <br /><br />
+
+            <button class="btn" id="idButtonAddNewShoeItem">
+                <i class="material-icons" style="font-size:20px; position:relative; top:5px;">
+                    add_circle_outline
+                </i> Add New
+            </button>
+        </div>
+
+        <!-- main section, add to inventory -->
+        <div id="idDivAddItemToInventory" class="classDivAddItemToInventory">
+            <table class="classTableContaierAddItemToInventory">
+                <thead>
+                    <tr>
+                        <td class="left"></td>
+                        <td class="right"></td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td colspan="2">
+                        <label class="classLabelAddNewItem">
+                            <strong><u>Add New Show Item</u></strong>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Name:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idTextBoxShoeName" class="classTextBoxInquire" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Description:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <textarea id="idTextAreaShoeDescription" class="classTextAreaShoeDescription"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Price:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idTextBoxShoePrice" class="classTextBoxInquire" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Size:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idInputShoeSize" class="classInputShoeSize" type="number" min="1" max="99" step="1" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Quantity:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idInputQuantity" class="classInputQuantity" type="number" min="1" max="99" step="1" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="idButtonSubmitAddItemInventorySection" class="classButtonSubmit">Submit</button>
+                        <button id="idButtonCancelAddItemInventorySection" class="classButtonCancel">Cancel</button>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- main section, update/delete item in inventory -->
+        <div id="idDivUpdateDeleteItemToInventory" class="classDivUpdateDeleteItemToInventory">
+            <table class="classTableContaierUpdateDeleteItemToInventory">
+                <thead>
+                    <tr>
+                        <td class="left"></td>
+                        <td class="right"></td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td colspan="2">
+                        <label class="classLabelUpdateDeleteItem">
+                            <strong><u>Update/Delete Shoe Item</u></strong>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Id:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idTextBoxUpdateDeleteShoeId" class="classTextBoxUpdateDeleteShoeId" type="text" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Name:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idTextBoxUpdateDeleteShoeName" class="classTextBoxInquire" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Description:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <textarea id="idTextAreaUpdateDeleteShoeDescription" class="classTextAreaShoeDescription"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Price:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idTextBoxUpdateDeleteShoePrice" class="classTextBoxInquire" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Shoe Size:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idInputShoeSizeUpdateDelete" class="classInputShoeSize" type="number" min="1" max="99" step="1" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="classLabelInquire">
+                            <strong>
+                                Quantity:
+                            </strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input id="idInputQuantityUpdateDelete" class="classInputQuantity" type="number" min="1" max="99" step="1" value="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="idButtonSaveUpdateDelete" class="classButtonSubmit">Save</button>
+                        <button id="idButtonCancelUpdateDelete" class="classButtonCancel">Cancel</button>
+                        <button id="idButtonDeleteSelection" class="classButtonDeleteSelection">Delete Selection</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--section div right side-->
+        <div id="idRightDivBox" class="classRightDivBox">
+        </div>
+
+
+</body>
+</html>

@@ -11,14 +11,11 @@ namespace Portfolio3_2.Controllers
     public class ApplicationController : ApiController
     {
         App_Data.ShoeInventoryDBDataClassesDataContext shoeInventoryDBDataClassesDataContext = new App_Data.ShoeInventoryDBDataClassesDataContext();
-
         [HttpGet]
         [Route("api/Application/getAllListShoeInventory")]
         public IHttpActionResult getAllListShoeInventory()
         {
-
             List<ShoeInventoryTableModel> listShoeInventoryTableModel = new List<ShoeInventoryTableModel>();
-
             listShoeInventoryTableModel = (from shoeInventoryTableModel in shoeInventoryDBDataClassesDataContext.ShoeInventoryTables
                                            select new ShoeInventoryTableModel()
                                            {
@@ -29,22 +26,18 @@ namespace Portfolio3_2.Controllers
                                                shoeSize = Convert.ToInt32(shoeInventoryTableModel.ShoeSize),
                                                quantity = Convert.ToInt32(shoeInventoryTableModel.Quantity)
                                            }).ToList<ShoeInventoryTableModel>();
-
             if (listShoeInventoryTableModel.Count == 0)
             {
                 return NotFound();
             }
-
             return Ok(listShoeInventoryTableModel);
         }
-
 
         [HttpGet]
         [Route("api/Application/getShoeInventoryItemId")]
         public IHttpActionResult getShoeInventoryItemId(int id)
         {
             ShoeInventoryTableModel shoeInventoryTableModel = new ShoeInventoryTableModel();
-
             shoeInventoryTableModel = (from shoeInventoryTable in shoeInventoryDBDataClassesDataContext.ShoeInventoryTables
                                        where shoeInventoryTable.Id == id
                                        select new ShoeInventoryTableModel()
@@ -55,17 +48,13 @@ namespace Portfolio3_2.Controllers
                                            shoePrice = shoeInventoryTable.ShoePrice.ToString(),
                                            shoeSize = Convert.ToInt32(shoeInventoryTable.ShoeSize),
                                            quantity = Convert.ToInt32(shoeInventoryTable.Quantity)
-
                                        }).FirstOrDefault();
-
             if (shoeInventoryTableModel == null)
             {
                 return NotFound();
             }
-
             return Ok(shoeInventoryTableModel);
         }
-
 
         [HttpPost]
         [Route("api/Application/addNewShoeInventoryItem")]
@@ -75,19 +64,15 @@ namespace Portfolio3_2.Controllers
             {
                 return BadRequest("Invalid data.");
             }
-
             App_Data.ShoeInventoryTable shoeInventoryTable = new App_Data.ShoeInventoryTable();
-
             shoeInventoryTable.Id = shoeInventoryTableModel.id;
             shoeInventoryTable.ShoeName = shoeInventoryTableModel.shoeName;
             shoeInventoryTable.ShoeDescription = shoeInventoryTableModel.shoeDescription;
             shoeInventoryTable.ShoePrice = shoeInventoryTableModel.shoePrice;
             shoeInventoryTable.ShoeSize = shoeInventoryTableModel.shoeSize;
             shoeInventoryTable.Quantity = shoeInventoryTableModel.quantity;
-
             shoeInventoryDBDataClassesDataContext.ShoeInventoryTables.InsertOnSubmit(shoeInventoryTable);
             shoeInventoryDBDataClassesDataContext.SubmitChanges();
-
             return Ok();
         }
 
@@ -99,22 +84,16 @@ namespace Portfolio3_2.Controllers
             {
                 return BadRequest("Invalid data.");
             }
-
-            App_Data.ShoeInventoryTable shoeInventoryTable = new App_Data.ShoeInventoryTable();
-
-            
+            App_Data.ShoeInventoryTable shoeInventoryTable = new App_Data.ShoeInventoryTable(); 
             shoeInventoryTable.ShoeName = postShoeInventoryTableModel.shoeName;
             shoeInventoryTable.ShoeDescription = postShoeInventoryTableModel.shoeDescription;
             shoeInventoryTable.ShoePrice = postShoeInventoryTableModel.shoePrice;
             shoeInventoryTable.ShoeSize = postShoeInventoryTableModel.shoeSize;
             shoeInventoryTable.Quantity = postShoeInventoryTableModel.quantity;
-
             shoeInventoryDBDataClassesDataContext.ShoeInventoryTables.InsertOnSubmit(shoeInventoryTable);
             shoeInventoryDBDataClassesDataContext.SubmitChanges();
-
             return Ok();
         }
-
 
         [HttpPut]
         [Route("api/Application/updateShoeInventoryItemDetail")]
@@ -124,10 +103,8 @@ namespace Portfolio3_2.Controllers
             {
                 return BadRequest("Invalid data.");
             }
-
             App_Data.ShoeInventoryTable shoeInventoryTable = new App_Data.ShoeInventoryTable();
             shoeInventoryTable = shoeInventoryDBDataClassesDataContext.ShoeInventoryTables.SingleOrDefault(u => u.Id == shoeInventoryTableModel.id);
-
             if (shoeInventoryTable != null)
             {
                 shoeInventoryTable.Id = (int)shoeInventoryTableModel.id;
@@ -136,7 +113,6 @@ namespace Portfolio3_2.Controllers
                 shoeInventoryTable.ShoePrice = (string)shoeInventoryTableModel.shoePrice;
                 shoeInventoryTable.ShoeSize = (int)shoeInventoryTableModel.shoeSize;
                 shoeInventoryTable.Quantity = (int)shoeInventoryTableModel.quantity;
-
                 shoeInventoryDBDataClassesDataContext.SubmitChanges();
                 return Ok();
             }
@@ -146,13 +122,11 @@ namespace Portfolio3_2.Controllers
             }
         }
 
-
         [HttpDelete]
         [Route("api/Application/deleteShoeInventoryItemId")]
         public IHttpActionResult deleteShoeInventoryItemId(int shoeId)
         {
             ShoeInventoryTableModel shoeInventoryTableModel = new ShoeInventoryTableModel();
-
             shoeInventoryTableModel = (from shoeInventoryTables in shoeInventoryDBDataClassesDataContext.ShoeInventoryTables
                                        where shoeInventoryTables.Id == shoeId
                                        select new ShoeInventoryTableModel()
@@ -164,12 +138,10 @@ namespace Portfolio3_2.Controllers
                                            shoeSize = Convert.ToInt32(shoeInventoryTables.ShoeSize),
                                            quantity = Convert.ToInt32(shoeInventoryTables.Quantity)
                                        }).FirstOrDefault();
-
             if (shoeInventoryTableModel == null)
             {
                 return NotFound();
             }
-
             App_Data.ShoeInventoryTable shoeInventoryTable = new App_Data.ShoeInventoryTable();
             shoeInventoryTable.Id = shoeInventoryTableModel.id;
             shoeInventoryTable.ShoeName = shoeInventoryTableModel.shoeName;
@@ -181,12 +153,6 @@ namespace Portfolio3_2.Controllers
             shoeInventoryDBDataClassesDataContext.ShoeInventoryTables.DeleteOnSubmit(shoeInventoryTable);
             shoeInventoryDBDataClassesDataContext.SubmitChanges();
             return Ok();
-
         }
-
-
-
-
-
-    }//end-class
-}//end-namespace
+    }
+}

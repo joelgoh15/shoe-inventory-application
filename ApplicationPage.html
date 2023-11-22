@@ -8,52 +8,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
 <body>
-
-    <!--section left side div-->
     <div id="idLeftDivBox" class="classLeftDivBox">
     </div>
-
-    <!--section for centre div-->
     <div id="idCentreDivBox" class="classCentreDivBox">
-
         <!--Page Header-->
         <div id="idHeaderDiv" class="classHeaderDiv">
             <label class="classLabelAppName">
                 <strong>Shoe Inventory Application</strong>
             </label>
         </div>
-
-        <!-- main section, list all inventory -->
         <div id="idDivListAllItemInventory" class="classDivListAllItemInventory">
             <label id="idLabelTitleListAllItemInventory" class="classLabelTitleListAllItemInventory">
                 <strong><u>Inventory List</u></strong>
             </label>
             <br />
-
             <table id="idTableShoeInventory">
             </table>
-
-            <!-- snackbar for get (first load) -->
             <div id="snackbar_get_initial_load"><strong>GET: Shoe Inventory List Loaded Successfully!</strong></div>
-            <!-- snackbar for post -->
             <div id="snackbar_post"><strong>POST: Item inserted successful!</strong></div>
-            <!-- snackbar for put -->
             <div id="snackbar_put"><strong>PUT: Shoe data updated successfully!</strong></div>
-            <!-- snackbar for delete operation -->
             <div id="snackbar_delete"><strong>DELETE: Shoe Item deleted successfully!</strong></div>
-
-
-
             <br /><br />
-
             <button class="btn" id="idButtonAddNewShoeItem">
                 <i class="material-icons" style="font-size:20px; position:relative; top:5px;">
                     add_circle_outline
                 </i> Add New
             </button>
         </div>
-
-        <!-- main section, add to inventory -->
         <div id="idDivAddItemToInventory" class="classDivAddItemToInventory">
             <table class="classTableContaierAddItemToInventory">
                 <thead>
@@ -132,14 +113,11 @@
                 <tr>
                     <td colspan="2">
                         <button id="idButtonSubmitAddItemInventorySection" class="classButtonSubmit">Submit</button>
-                        <button id="idButtonCancelAddItemInventorySection" class="classButtonCancel">Cancel</button>
-                        
+                        <button id="idButtonCancelAddItemInventorySection" class="classButtonCancel">Cancel</button>                       
                     </td>
                 </tr>
             </table>
         </div>
-
-        <!-- main section, update/delete item in inventory -->
         <div id="idDivUpdateDeleteItemToInventory" class="classDivUpdateDeleteItemToInventory">
             <table class="classTableContaierUpdateDeleteItemToInventory">
                 <thead>
@@ -236,25 +214,8 @@
                 </tr>
             </table>
         </div>
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-        <!--section div right side-->
-        <div id="idRightDivBox" class="classRightDivBox">
-        </div>
-
-
+    <div id="idRightDivBox" class="classRightDivBox">
+    </div>
 </body>
 </html>

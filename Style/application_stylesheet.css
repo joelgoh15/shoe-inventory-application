@@ -1,5 +1,4 @@
-﻿
-div.classLeftDivBox {
+﻿div.classLeftDivBox {
 }
 
 div.classCentreDivBox {
@@ -19,10 +18,6 @@ div.classHeaderDiv {
     width: 100%;
     height: 70px;
     border: 1px solid black;
-    /*border-left:none;
-            border-top:none;
-            border-right:none;
-            border-bottom:2px solid black;*/
     border-radius: 10px;
     display: block;
 }
@@ -37,7 +32,6 @@ label.classLabelAppName {
 div.classDivListAllItemInventory {
     display: block;
     width: 100%;
-    /*border: 1px solid black;*/
     margin-top: 20px;
     padding: 5px;
 }
@@ -47,47 +41,33 @@ label.classLabelTitleListAllItemInventory {
     font-size: 18px;
 }
 
-/* ************************** */
-/* style for table */
-/* start */
 #idTableShoeInventory {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    /*width: 100%; */
     width: 100%;
 }
 
-    #idTableShoeInventory td, #idTableShoeInventory th {
-        border: 1px solid #ddd;
-        padding: 8px;
-    }
+#idTableShoeInventory td, #idTableShoeInventory th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
 
-    #idTableShoeInventory tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+#idTableShoeInventory tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
-    #idTableShoeInventory tr:hover {
-        background-color: #ddd;
-        cursor: pointer;
-    }
+#idTableShoeInventory tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
 
-    #idTableShoeInventory th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #04AA6D;
-        color: white;
-    }
-
-/* end */
-/* style for table */
-/* ************************** */
-
-
-
-/* ************************** */
-/* style for add new button */
-/* start */
+#idTableShoeInventory th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
 
 .btn {
     background-color: DodgerBlue;
@@ -98,14 +78,9 @@ label.classLabelTitleListAllItemInventory {
     cursor: pointer;
 }
 
-    /* Darker background on mouse-over */
-    .btn:hover {
-        background-color: RoyalBlue;
-    }
-
-/* end */
-/* style for add new button */
-/* ************************** */
+.btn:hover {
+    background-color: RoyalBlue;
+}
 
 div.classDivAddItemToInventory {
     display: block;
@@ -115,19 +90,17 @@ div.classDivAddItemToInventory {
     padding: 5px;
 }
 
-
-
 table.classTableContaierAddItemToInventory {
     width: 100%;
 }
 
-    table.classTableContaierAddItemToInventory thead tr td.left {
-        width: 20%;
-    }
+table.classTableContaierAddItemToInventory thead tr td.left {
+    width: 20%;
+}
 
-    table.classTableContaierAddItemToInventory thead tr td.right {
-        width: 80%;
-    }
+table.classTableContaierAddItemToInventory thead tr td.right {
+    width: 80%;
+}
 
 label.classLabelAddNewItem {
     font-family: Calibri;
@@ -148,8 +121,6 @@ input.classTextBoxInquire {
     font-size: 16px;
 }
 
-
-
 .classTextAreaShoeDescription {
     font-family: Calibri;
     font-size: 16px;
@@ -160,7 +131,6 @@ input.classTextBoxInquire {
     overflow: scroll;
     resize: none;
 }
-
 
 input.classInputShoeSize {
     width: 120px;
@@ -182,11 +152,6 @@ input.classInputQuantity {
     font-size: 16px;
 }
 
-/* ************************** */
-/* style for submit button -
-            add new shoe item section */
-/* start */
-
 button.classButtonSubmit {
     background-color: white;
     border: 2px solid #04AA6D;
@@ -202,23 +167,10 @@ button.classButtonSubmit {
     cursor: pointer;
 }
 
-    button.classButtonSubmit:hover {
-        background-color: #04AA6D;
-        color: white;
-    }
-
-
-/* end */
-/* style for submit button -
-        add new shoe item section */
-/* ************************** */
-
-
-
-/* ************************** */
-/* style for cancel button -
-        add new shoe item section */
-/* start */
+button.classButtonSubmit:hover {
+    background-color: #04AA6D;
+    color: white;
+}
 
 button.classButtonCancel {
     background-color: white;
@@ -235,26 +187,21 @@ button.classButtonCancel {
     cursor: pointer;
 }
 
-    button.classButtonCancel:hover {
-        background-color: #d1e0e0;
-    }
-
-/* end */
-/* style for cancel button -
-        add new shoe item section */
-/* ************************** */
+button.classButtonCancel:hover {
+    background-color: #d1e0e0;
+}
 
 table.classTableContaierUpdateDeleteItemToInventory {
     width: 100%;
 }
 
-    table.classTableContaierUpdateDeleteItemToInventory thead tr td.left {
-        width: 20%;
-    }
+table.classTableContaierUpdateDeleteItemToInventory thead tr td.left {
+    width: 20%;
+}
 
-    table.classTableContaierUpdateDeleteItemToInventory thead tr td.right {
-        width: 80%;
-    }
+table.classTableContaierUpdateDeleteItemToInventory thead tr td.right {
+    width: 80%;
+}
 
 label.classLabelUpdateDeleteItem {
     font-family: Calibri;
@@ -273,9 +220,6 @@ input.classTextBoxUpdateDeleteShoeId {
     font-size: 16px;
 }
 
-/* ************************** */
-/* delete selection button */
-/* start */
 button.classButtonDeleteSelection {
     background-color: #ff0000;
     border: 2px solid #ff0000;
@@ -292,31 +236,16 @@ button.classButtonDeleteSelection {
     float: right;
 }
 
-    button.classButtonDeleteSelection:hover {
-        background-color: #ff4d4d;
-    }
-
-/* end */
-/* delete selection button */
-/* ************************** */
-
+button.classButtonDeleteSelection:hover {
+    background-color: #ff4d4d;
+}
 
 div.classDivUpdateDeleteItemToInventory {
     display: block;
     width: 100%;
-    /*border: 1px solid black;*/
     margin-top: 20px;
     padding: 5px;
 }
-
-
-/* ************************** */
-/* style for snackbar - 
-            get (load), post, put, 
-            delete */
-/* start */
-
-/* snackbar_initial_load */
 
 #snackbar_get_initial_load {
     visibility: hidden;
@@ -337,7 +266,6 @@ div.classDivUpdateDeleteItemToInventory {
     font-size: 18px;
 }
 
-/* snackbar_post */
 #snackbar_post {
     visibility: hidden;
     min-width: 250px;
@@ -357,8 +285,6 @@ div.classDivUpdateDeleteItemToInventory {
     font-size: 18px;
 }
 
-
-/* snackbar_put */
 #snackbar_put {
     visibility: hidden;
     min-width: 250px;
@@ -378,7 +304,6 @@ div.classDivUpdateDeleteItemToInventory {
     font-size: 18px;
 }
 
-/* snackbar_delete */
 #snackbar_delete {
     visibility: hidden;
     min-width: 250px;
@@ -398,16 +323,14 @@ div.classDivUpdateDeleteItemToInventory {
     font-size: 18px;
 }
 
-
-
-    #snackbar_post.show,
-    #snackbar_get_initial_load.show,
-    #snackbar_put.show,
-    #snackbar_delete.show {
-        visibility: visible;
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    }
+#snackbar_post.show,
+#snackbar_get_initial_load.show,
+#snackbar_put.show,
+#snackbar_delete.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
 
 @-webkit-keyframes fadein {
     from {
@@ -456,11 +379,4 @@ div.classDivUpdateDeleteItemToInventory {
         opacity: 0;
     }
 }
-
-
-/* end */
-/* style for snackbar - 
-            get (load), post, put, 
-            delete */
-/* ************************** */
 

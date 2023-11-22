@@ -1,7 +1,4 @@
-﻿
-
-window.addEventListener("load", start, false);
-var asyncRequest;
+﻿var asyncRequest;
 function start() {
     var cancelButtonUpdateDeleteSection = document.getElementById("idButtonCancelUpdateDelete");
     cancelButtonUpdateDeleteSection.addEventListener("click", fnCancelButtonUpdateDeleteSection, false);
@@ -303,5 +300,4 @@ function fnSubmitButtonAddItemSection() {
         setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
     }
 }
-
-
+window.addEventListener("load", start, false);

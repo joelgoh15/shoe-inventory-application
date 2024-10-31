@@ -1,7 +1,7 @@
 # Shoe Inventory Application
 A shoe inventory application.
 
-# Technical Details
+## Technical Details
 1. A portfolio project with an emphasis on ASP.Net Web-API for C.R.U.D operations.
 2.  Technology stacks and approach used:
 <ul>
@@ -17,6 +17,6 @@ A shoe inventory application.
   </ul>
 </ul>
 
-# Project Presentation
+## Project Presentation
 
 https://github.com/user-attachments/assets/fe427b07-2ae8-4c2a-bf8b-00ab30e7ae9e

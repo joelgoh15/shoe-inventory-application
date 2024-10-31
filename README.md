@@ -1,8 +1,6 @@
 # Shoe Inventory Application
 A shoe inventory application.
 
-A software engineering portfolio by Joel Goh C.H.
-
 # Technical Details
 1. A portfolio project with an emphasis on ASP.Net Web-API for C.R.U.D operations.
 2.  Technology stacks and approach used:

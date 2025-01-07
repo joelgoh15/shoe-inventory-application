@@ -19,4 +19,4 @@ A shoe inventory application.
 
 ## Project Presentation
 
-https://github.com/user-attachments/assets/fe427b07-2ae8-4c2a-bf8b-00ab30e7ae9e
+https://github.com/user-attachments/assets/a11b3bd3-9b90-43b1-904c-c7636a9f191c

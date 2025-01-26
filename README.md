@@ -16,7 +16,3 @@ A shoe inventory application.
     <li>MSSQL Database</li>
   </ul>
 </ul>
-
-## Project Presentation
-
-https://github.com/user-attachments/assets/a11b3bd3-9b90-43b1-904c-c7636a9f191c

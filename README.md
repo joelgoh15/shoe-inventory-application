@@ -1,4 +1,4 @@
-# Shoe Inventory Application
+## Introduction
 A shoe inventory application.
 
 ## Technical Details
